@@ -126,7 +126,7 @@ mcp = FastMCP(
 # --- Tool: validate (required by Puch) ---
 @mcp.tool
 async def validate() -> str:
-    return f"🔥 [LEGAL-SAHAYAK-MCP] Validation: {MY_NUMBER}"
+    return MY_NUMBER
 
 # --- Tool: legal_consultation ---
 LegalConsultationDescription = RichToolDescription(
