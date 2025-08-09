@@ -1,1 +1,1 @@
-web: python mcp-bearer-token/mcp_starter.py
+web: python legal-sahayak/main.py
