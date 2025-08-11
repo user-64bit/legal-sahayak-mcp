@@ -504,6 +504,10 @@ LegalPrecedentSearchDescription = RichToolDescription(
     side_effects="Returns search results with links to court judgments, case summaries, and legal precedent information.",
 )
 
+@mcp.tool
+async def about() -> dict:
+    return {"name": mcp.name, "description": "Indian Legal Assistant", "version": mcp.version}
+
 @mcp.tool(description=LegalPrecedentSearchDescription.model_dump_json())
 async def legal_precedent_search(
     case_facts: Annotated[str, Field(description="Brief description of the legal issue or facts for which precedents are needed")],
